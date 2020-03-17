@@ -1,0 +1,58 @@
+#print("Hello World! This is our first python program in LInux")
+
+'''
+def arithmetic(a,b):
+	print "Sum:", a+b
+	print "Difference:", a-b
+	print "Product:" , a*b
+	print "Quotient:" , a/b
+	print "Remainder:" ,a%b
+
+arithmetic(10,5)
+'''
+'''
+def swap(p,q):
+	print "Before swapping, p and q are:",p,q
+	p=p+q
+	q=p-q
+	p=p-q
+        print "After swapping, p and q are:",p,q
+swap(15,20)
+'''
+
+'''list'''
+'''
+list1=[1432,8892,3413,2401,567,60481,27,805,9411,103241,432,78119]
+list1.sort()
+max=list1[-1]
+min=list1[0]
+print "Maximum:" ,max
+print "Minimum:" ,min
+'''
+
+'''
+def prime(n):
+	flag=1
+	for i in range(2,n):
+		if(n%i==0):
+			flag=0
+	if(flag==1):
+		print("Prime number")
+	else:
+		print("Not prime number")
+
+prime(10)
+'''
+
+'''
+l1=[5,27,67,35,79,99,76,85,42,32,12,89]
+l2=[]
+for i in l1:
+	d=i
+	while(d!=0):
+		l2.append(i)
+		d=d-1
+from random import randint
+print(l2[randint(0,len(l2))])
+''''
+

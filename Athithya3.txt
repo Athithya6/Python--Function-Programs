@@ -1,0 +1,7 @@
+I am doing the write operation now
+ It can be used to create a new file and write into it
+ It can also be used to overwrite in an existing file.This is the append operation
+It can be used to add text at the end of an articleThis is the append operation
+It can be used to add text at the end of an article
+This is the append operation
+It can be used to add text at the end of an article
