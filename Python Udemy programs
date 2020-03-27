@@ -1,0 +1,164 @@
+def lesser_of_two_evens(a,b):
+    if(a>b):
+        greater=a
+        lesser=b
+    else:
+        greater=b
+        lesser=a
+    if(a%2==0 and b%2==0):
+        return lesser
+    else:
+        return greater
+#lesser_of_two_evens(2,4)
+#lesser_of_two_evens(2,5)
+#lesser_of_two_evens(5,3)
+#lesser_of_two_evens(11,6)
+#lesser_of_two_evens(46,44)
+
+def make_twenty(m,n):
+    if(m+n==20 or m==20 or n==20):
+        return True
+    else:
+        return False
+    
+#make_twenty(19,1)
+#make_twenty(0,20)
+#make_twenty(16,3)
+
+def animal_crackers(text):
+    l=[]
+    l=text.split()
+    if (l[0][0]==l[1][0]):
+        return True
+    else:
+        return False
+#animal_crackers("Levelheaded Llama")
+#animal_crackers("Crazy Kangaroo")
+    
+
+
+def old_macdonald(name):
+    
+    name1=""
+    for i in range(len(name)):
+        if(i==0 or i==3):
+            name1=name1+name[i].capitalize()
+        else:
+            name1=name1+name[i]
+    return name1
+    
+    '''
+    first_letter=name[0]
+    beg=name[1:3]
+    fourth_letter=name[3]
+    rem=name[4:]
+    return first_letter.capitalize()+beg+fourth_letter.capitalize()+rem
+    '''
+    
+    '''
+    first_half=name[0:3]
+    second_half=name[3:]
+    return first_half.capitalize()+second_half.capitalize() 
+    '''
+     
+    
+#old_macdonald("Athithya")
+    
+#old_macdonald("macdonald")
+#old_macdonald("adityavarma")
+
+
+def almost_there(n):
+    
+    if ((n in range(90,111)) or (n in range(190,211))):
+        return True
+    else:
+        return False
+    
+    #return (abs(100-n)<=10) or (abs(200-n)<=10)
+almost_there(90)
+
+
+
+def master_yoda(text):
+    
+    l=[]
+    l=text.split()
+    m=l[::-1]
+    return " ".join(m)
+    
+            
+#master_yoda("I am home")
+#master_yoda("We are ready")
+#master_yoda("Athithya Narayan")
+
+
+def paper_doll(text):
+    text1=""
+    for i in text:
+        text1=text1+i*3
+    return text1
+
+#paper_doll('Hello')
+#paper_doll("Mississippi")
+
+
+def has_33(nums):
+    for i in range(0,len(nums)-1):
+        if (nums[i]==3 and nums[i+1]==3):
+            return True
+    return False
+#has_33([3,1,3])
+#has_33([1,3,3])
+#has_33([1,3,1,3])
+
+def repeat_char(string)
+    string1=""
+    l=[5,8,4,6,9,3,1,7,2]
+    j=0
+    for i in string:
+        string1=string1+i*l[j]
+        j=j+1
+    return string1
+
+#repeat_char("Spielberg")
+
+
+def blackjack(p,q,r):
+    s=p+q+r
+    if(s<=21):
+        print(s)
+    elif ((p==11 or q==11 or r==11) and s<=31) :
+        print(s-10)
+    else:
+        print('BUST')
+    
+blackjack(5,6,7)
+blackjack(9,9,9)
+blackjack(9,9,11)
+blackjack(11,11,11)
+blackjack(10,11,11)
+
+
+
+l=[]
+def prime(a):
+    flag=0
+    for i in range(2,a):
+        if(a%i==0):
+            flag=1
+    
+    if(flag==0):
+        l.append(a)
+        
+def count_primes(n):
+    count=0
+    for j in range(2,n):
+        prime(j)
+    print("Prime numbers:")
+    print(l)
+    for i in l:
+        count=count+1
+    print("No.of prime numbers= ",count)
+
+count_primes(500)
