@@ -1,0 +1,112 @@
+import math
+def vol_sph(r):
+    v=(4*math.pi*r*r*r)/3
+    return v
+
+R=int(input("Enter the radius:\n"))
+print("The volume of the sphere is:\n")
+vol_sph(R)
+    
+def ran_bool(num,low,high):
+    if num in range(low,high):
+        return True
+    else:
+        return False
+
+'''
+def ran_bool(num,low,high):
+    return num in range(low,high)
+'''
+    
+ran_bool(5,2,7)
+
+def up_low(s):
+    '''
+    d={'upper':0,'lower':0}
+    for x in s:
+        if x.isupper():
+            d['upper']+=1
+        elif x.islower():
+            d['lower']+=1
+        else:
+            pass
+    print("No.of upper case letters: ",d['upper'])
+    print("No.of lower case letters: ",d['lower'])
+    '''
+    
+    
+    count_up=0
+    count_low=0
+    for i in s:
+        if i.isupper():
+            count_up+=1
+        elif i.islower():
+            count_low+=1
+        else:
+            continue
+    print("No.of upper case letters: ",count_up)
+    print("No.of lower case letters: ",count_low)
+    
+
+string=input("Enter any string:\n")
+up_low(string)
+
+def unique_list(lst):
+    '''
+    x=[]
+    for a in lst:
+        if a not in x:
+            x.append(a)
+    return x
+    '''
+    
+    lst1=[]
+    s=set(lst)
+    for i in s:
+        lst1.append(i)
+    return lst1
+    
+
+unique_list([1,1,1,1,2,2,3,3,3,3,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5])
+
+def multiply(numbers):
+    prod=1
+    #prod1=numbers[0]
+    for i in numbers:
+        prod=prod1*i
+    return prod
+
+multiply([1,2,3,-4])
+
+def palindrome(s):
+    s1=s.replace(" ","")
+    s2=s1.lower()
+    flag=0
+    l=len(s2)
+    for i in range(0,l):
+        if s2[i]!=s2[l-i-1]:
+            flag=1
+    if(flag==1):
+        return False
+    else:
+        return True
+    
+palindrome("NurSes   Run")
+
+import string
+def ispangram(s):
+    alphaset=set(string.ascii_lowercase)
+    s1=s.lower()
+    return alphaset<=set(s1)
+        
+s=input("Enter any string:\n")
+#ispangram(s)
+#ispangram("Legends of the Fall")
+
+def ran_check(num,low,high):
+    if num in range(low,high):
+        print("%s is in the range" %str(num))
+    else:
+        print("The number is outside the range")
+        
+#ran_check(6,2,12)
