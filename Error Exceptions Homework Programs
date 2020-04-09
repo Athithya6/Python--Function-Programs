@@ -1,0 +1,29 @@
+#Program 1
+try:
+    for i in ['a','b','c']:
+        print(i**2)
+except:
+    print("Invalid operation on type string")
+ 
+#Program 2
+def division(a,b):
+    print(a/b)
+try:
+    division(5,0)
+    
+except:
+    print("Division by zero not possible")
+
+#Program 3
+def ask():
+    while True:
+        try:
+            n=int(input("Input an integer: "))
+        except:
+            print("An error occurred!Please try again!")
+            continue
+        else:
+            print("Thank you.Your squared number is: ",n**2)
+            break
+ask()
+    
