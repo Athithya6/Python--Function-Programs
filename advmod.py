@@ -118,6 +118,7 @@ elapse_time2 = end_time2 - start_time2
 print(elapse_time2)
 '''
 
+'''
 #using timeit module
 import timeit
 
@@ -142,7 +143,35 @@ def func_two(n):
 	return list(map(str,range(n)))
 '''
 print(timeit.timeit(stmt2,setup2,number=1000000))
+'''
 
+#RegEx
+import re
+'''
+text= "Hi I am Athithya. My number is 444-555-6666."
+phone = re.search(r"\d{3}-\d{3}-\d{4}",text)
+print(phone)
+
+phone_pattern = re.compile(r"(\d{3})-(\d{3})-(\d{4})")
+results = re.search(phone_pattern,text)
+print(results.group())
+print(results.group(2))
+print(results.group(5))
+'''
+
+string = "aaaaaaTTTTT444499DHJKKKKKLAXC22776618340000777888000GHJcvv  vvvbbqqllooAZX"
+pat_one = re.search(r"\w{3,}",string)
+pat_two = re.search(r"\W{4}",string)
+pat_three = re.search(r"D\D\D",string)
+pat_four = re.search(r"\d{4,6}",string)
+part_five = re.search(r"\S*",string)
+part_six = re.search(r"\s?",string)
+print(pat_one)
+print(pat_two)
+print(pat_three)
+print(pat_four)
+print(part_five)
+print(part_six)
 
 
 
