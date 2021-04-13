@@ -1,0 +1,21 @@
+def vow_string(s1):
+    vowels_set={'a','e','i','o','u'}
+    s1=s1.lower()
+    string_set=set(s1)
+    string_set_vowel=set()
+    for i in s1:
+        if i in vowels_set:
+            string_set_vowel.add(i)
+
+    if(vowels_set==string_set_vowel):
+        print("lovely string")
+    else:
+        print("ugly string")
+    
+    return 0
+
+t=int(input())
+while(t>0):
+    s=input()
+    vow_string(s)
+    t-=1
